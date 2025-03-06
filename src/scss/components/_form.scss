@@ -1,0 +1,105 @@
+.float-field {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.float-field__input {
+  width: 100%;
+  height: 60px;
+  padding: 20px 16px 10px 16px;
+  border: 1px solid #e6e8ec;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+.float-field__input[type="tel"] {
+  padding-left: 60px;
+
+  & ~ .float-field__label {
+    padding-left: 40px;
+  }
+}
+.float-field--focused {
+  .float-field__prefix {
+    transform: translateY(80%);
+    // bottom: 20px;
+  }
+  .float-field__separator {
+    transform: translateY(80%);
+  }
+  .float-field__input[type="tel"] ~ .float-field__label {
+    padding-left: 0;
+  }
+}
+.float-field__input:focus {
+  border-color: #7b61ff;
+  background-color: #fff;
+  outline: none;
+}
+.float-field__prefix {
+  position: absolute;
+  left: 16px;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-gray-1);
+  z-index: 2;
+  line-height: 1;
+  transition: var(--transition-ui-time) var(--transition-ui-ease);
+}
+
+.float-field__label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--text-gray-1);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.float-field__input:focus ~ .float-field__label,
+.float-field__input:not(:placeholder-shown) ~ .float-field__label {
+  top: 8px;
+  transform: translateY(0);
+  left: 16px;
+  font-size: 11px;
+
+  span {
+    display: none;
+  }
+}
+
+.float-field__input::placeholder {
+  color: transparent;
+}
+
+.float-field--default .float-field__input {
+  color: #a0a0a0;
+}
+
+.float-field--focused .float-field__input {
+  background-color: #fff;
+}
+
+.float-field--focused .float-field__label {
+  top: 8px;
+  font-size: 11px;
+  span {
+    display: none;
+  }
+}
+
+.float-field--es .float-field__label {
+  font-size: 11px;
+}

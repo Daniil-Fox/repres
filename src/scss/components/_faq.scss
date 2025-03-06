@@ -1,0 +1,22 @@
+.faq {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &__title {
+    margin-bottom: 32px;
+    max-width: 465px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

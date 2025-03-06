@@ -1,0 +1,74 @@
+.testi-item {
+  padding: 16px;
+  border: 1px solid var(--text-light-grey);
+  border-radius: 16px;
+  background-color: #fff;
+
+  &__header {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  &__img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__name {
+    margin: 0;
+    margin-bottom: 6px;
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--text-black);
+  }
+
+  &__rating {
+    display: flex;
+    gap: 6px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      fill: var(--text-disabled);
+
+      &.active {
+        fill: var(--orange-2);
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--violet-1);
+    cursor: pointer;
+    svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      stroke: currentColor;
+      transition: transform var(--transition-ui-time) var(--transition-ui-ease);
+    }
+  }
+
+  &.expanded {
+    .testi-item__more {
+      svg {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+}

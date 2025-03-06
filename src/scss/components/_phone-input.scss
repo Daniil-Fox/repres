@@ -1,0 +1,96 @@
+.phone-input {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.phone-input__field {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px 0 80px;
+  font-size: 16px;
+  border: 1px solid #e6e8ec;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  line-height: 56px;
+}
+
+.phone-input__label {
+  position: absolute;
+  left: 80px; /* Начальное положение */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0a0a0;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.phone-input__prefix {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-gray-1);
+  z-index: 2;
+  line-height: 1;
+  transition: var(--transition-ui-time) var(--transition-ui-ease);
+}
+
+/* Эффект поднятия лейбла при фокусе - лейбл смещается влево */
+.phone-input__field:focus ~ .phone-input__label,
+.phone-input__field:not(:placeholder-shown) ~ .phone-input__label,
+.phone-input--has-value .phone-input__label {
+  top: 12px;
+  left: 16px; /* Прижимаем к левому краю при фокусе */
+  font-size: 12px;
+  transform: translateY(0);
+  color: #7b61ff;
+}
+
+/* Активное состояние (focused) */
+.phone-input__field:focus {
+  outline: none;
+  border-color: #7b61ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.1);
+}
+
+/* Делаем placeholder прозрачным */
+.phone-input__field::placeholder {
+  color: transparent;
+}
+
+/* Для демонстрации "focused" состояния */
+.phone-input--focused .phone-input__field {
+  border-color: #7b61ff;
+  background-color: #ffffff;
+}
+
+.phone-input--focused .phone-input__label {
+  top: 12px;
+  left: 16px; /* Прижимаем к левому краю */
+  font-size: 12px;
+  transform: translateY(0);
+  color: #7b61ff;
+}
+
+/* Дополнительные стили */
+.separator {
+  height: 1px;
+  background-color: #e6e8ec;
+  margin: 30px 0;
+}
+
+.state-title {
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}

@@ -1,0 +1,67 @@
+.footer {
+  padding: 48px 0;
+  background: var(--bg-grey);
+  border-radius: 30px 30px 0 0;
+  @include small-tablet {
+    padding: 32px 0;
+  }
+  &__row {
+    &:not(:last-child) {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--text-disabled);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 130%;
+        color: var(--vilet-dark);
+        transition: var(--transition-ui-time) var(--transition-ui-ease);
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        a {
+          color: inherit;
+        }
+
+        @include hover {
+          color: var(--violet-1);
+        }
+      }
+    }
+  }
+
+  &__desc {
+    color: var(--vilet-dark);
+  }
+
+  &__capture {
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--vilet-dark);
+
+    a {
+      color: inherit;
+    }
+  }
+}

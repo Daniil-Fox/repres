@@ -1,0 +1,139 @@
+.loan {
+  width: 100%;
+  max-width: 528px;
+  background-color: var(--white);
+  border-radius: 14px;
+  padding: 32px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+}
+
+.loan__header {
+  margin-bottom: 32px;
+}
+
+.loan__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.loan__subtitle {
+  line-height: 130%;
+  color: var(--text-black);
+}
+
+.loan__amount {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: right;
+  color: var(--orange-1);
+}
+
+.loan__slider-container {
+  margin: 24px 0;
+  position: relative;
+}
+
+.loan__slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 11px;
+  border-radius: 30px;
+  background: linear-gradient(to right, #7778ee 25%, #6a47f7 50%, #e6e8f0 50%);
+  outline: none;
+}
+
+.loan__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #7b68ee;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.loan__slider::-moz-range-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #7b68ee;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.loan__slider-values {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-gray);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Button */
+.loan__button {
+  width: 100%;
+  height: 62px;
+  margin-bottom: 24px;
+}
+
+/* Footer */
+.loan__disclaimer {
+  color: var(--vilet-dark);
+  margin-bottom: 16px;
+}
+
+.loan__credits {
+  display: flex;
+  align-items: center;
+}
+
+.loan__avatars {
+  display: flex;
+  margin-right: 12px;
+}
+
+.loan__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.loan__avatar:first-child {
+  margin-left: 0;
+}
+
+.loan__credits-text {
+  color: var(--vilet-dark);
+  span {
+    font-weight: 500;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+  .loan {
+    max-width: 580px;
+    padding: 40px;
+  }
+
+  .loan__title {
+    font-size: 36px;
+  }
+}
