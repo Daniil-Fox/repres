@@ -1,0 +1,75 @@
+<section class="hero mb64">
+  <div class="container">
+    <div class="hero__container" style="--bg-img: url(./../img/hero/01.webp)">
+      <div class="loan">
+        <div class="loan__header">
+          <div class="loan__header-text">
+            <h1 class="loan__title headline-2 mb24">
+              Ваш первый онлайн кредит под&nbsp;0%
+            </h1>
+          </div>
+          <div class="loan__row mb16">
+            <p class="loan__subtitle subtitle-1">Сумма кредита</p>
+            <div class="loan__amount" id="loanAmountDisplay">25 000 MXN</div>
+          </div>
+        </div>
+
+        <div class="loan__slider-container mb24">
+          <input
+            type="range"
+            class="loan__slider"
+            id="loanSlider"
+            min="500"
+            max="30000"
+            value="25000"
+            step="500"
+          />
+          <div class="loan__slider-values">
+            <span>500</span>
+            <span>30000</span>
+          </div>
+        </div>
+
+        <button
+          class="loan__button btn btn--primary btn--medium mb24"
+          id="loanButton"
+        >
+          Получить 25 000 MXN
+        </button>
+
+        <p class="loan__disclaimer body-2 mb16">
+          Мы не берем денег за услугу и не запрашиваем номер карты или код по
+          СМС.
+        </p>
+
+        <div class="loan__credits">
+          <div class="loan__avatars">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt=""
+              class="loan__avatar"
+            />
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt=""
+              class="loan__avatar"
+            />
+            <img
+              src="https://randomuser.me/api/portraits/men/67.jpg"
+              alt=""
+              class="loan__avatar"
+            />
+            <img
+              src="https://randomuser.me/api/portraits/women/33.jpg"
+              alt=""
+              class="loan__avatar"
+            />
+          </div>
+          <span class="loan__credits-text body-2"
+            ><span>+255</span> кредитов выдано сегодня</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

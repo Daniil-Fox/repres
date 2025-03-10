@@ -1,0 +1,30 @@
+.testi-hero {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+  &__content {
+    grid-column: 8 span;
+  }
+
+  &__right {
+    grid-column: 4 span;
+  }
+  &__items {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    .testi-item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

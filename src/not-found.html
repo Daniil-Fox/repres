@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header-sec.html')
+      <main class="main">
+        <section class="page-404">
+          <div class="page-404__container">
+            <div class="page-404__img">
+              <img src="./img/404.webp" alt="" />
+            </div>
+            <p class="page-404__title headline-2">Упс...</p>
+            <p class="button-18 page-404__desc">
+              Похоже, эта страница потерялась, но подходящий кредит всё ещё
+              можно найти — начните поиск с Главной
+            </p>
+            <a href="./" class="btn btn--medium btn--primary page-404__btn">
+              Перейти на Главную
+            </a>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer-short.html')
+    </div>
+  </body>
+</html>

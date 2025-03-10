@@ -1,0 +1,11 @@
+.hero {
+  &__container {
+    padding: 30px 32px;
+    border-radius: 24px;
+    background-image: var(--bg-img),
+      linear-gradient(41deg, #d6d6ff 0%, #9b9cf6 100%);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 30px) 100%, center;
+  }
+}

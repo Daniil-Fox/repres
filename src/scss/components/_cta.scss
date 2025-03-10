@@ -1,0 +1,49 @@
+.cta {
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__container {
+    background-color: var(--bg-grey);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__left {
+    padding: 75px 97px 65px;
+  }
+
+  &__right {
+    padding: 16px;
+    border-radius: 24px;
+    background-image: url("./../img/snake-purple.svg"),
+      linear-gradient(41deg, #5a4dc1 0%, #7778ee 97%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 475px;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

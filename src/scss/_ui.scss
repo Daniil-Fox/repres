@@ -37,6 +37,10 @@ h1,
   font-size: 44px;
   line-height: 1.2;
   font-weight: 700;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 h2,
@@ -45,6 +49,10 @@ h2,
   font-size: 34px;
   line-height: 1.2;
   font-weight: 700;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 h3,
@@ -53,6 +61,10 @@ h3,
   font-size: 28px;
   line-height: 1.3;
   font-weight: 600;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 h4,
@@ -61,6 +73,10 @@ h4,
   font-size: 24px;
   line-height: 1.3;
   font-weight: 600;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 h5,
@@ -69,6 +85,10 @@ h5,
   font-size: 20px;
   line-height: 1.4;
   font-weight: 600;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 h6,
@@ -77,6 +97,10 @@ h6,
   font-size: 16px;
   line-height: 1.4;
   font-weight: 600;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .subtitle-1 {
@@ -84,6 +108,10 @@ h6,
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .subtitle-2 {
@@ -91,6 +119,10 @@ h6,
   font-size: 14px;
   line-height: 1.5;
   font-weight: 500;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .body-1 {
@@ -98,6 +130,10 @@ h6,
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .body-2 {
@@ -105,12 +141,20 @@ h6,
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 .body-s {
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .body-xs {
@@ -118,13 +162,29 @@ h6,
   font-size: 12px;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
-
+.button-18 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
+}
 .text-1 {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .text-2 {
@@ -132,6 +192,10 @@ h6,
   font-size: 12px;
   line-height: 1.5;
   font-weight: 400;
+  color: var(--text-black);
+  &--white {
+    color: var(--white);
+  }
 }
 
 .btn {
@@ -210,7 +274,16 @@ h6,
     }
   }
 }
-
+.btn--blue {
+  background-image: none;
+  background-color: #008ad7;
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--white);
+      background-color: #0177b6;
+    }
+  }
+}
 .btn--money {
   box-shadow: 0 4px 4px -4px rgba(12, 12, 13, 0.05),
     0 16px 32px -4px rgba(12, 12, 13, 0.1);
@@ -337,6 +410,71 @@ h6,
     svg {
       width: 24px;
       height: 24px;
+    }
+  }
+}
+
+.before {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--house {
+    &::before {
+      background-image: url("./../img/req/01.svg");
+    }
+  }
+  &--coins {
+    &::before {
+      background-image: url("./../img/req/02.svg");
+    }
+  }
+  &--list {
+    &::before {
+      background-image: url("./../img/req/03.svg");
+    }
+  }
+}
+
+.breadcrumbs {
+  padding: 24px 0;
+  span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: right;
+    color: var(--text-gray-1);
+
+    a {
+      color: inherit;
+    }
+    & > span {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-image: url("./../img/arr-right.svg");
+          background-size: 40% 40%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
     }
   }
 }

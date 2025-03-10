@@ -1,0 +1,23 @@
+.sign-up {
+  padding-top: 48px;
+  &__container {
+    max-width: calc(560px + var(--container-offset));
+    padding: 0 var(--container-offset);
+    margin: 0 auto;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-gray-1);
+    span {
+      display: inline-block;
+      background-color: var(--violet-1);
+      padding: 3px 10px;
+      border-radius: 12px;
+      color: var(--white);
+    }
+  }
+}

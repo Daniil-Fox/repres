@@ -1,0 +1,53 @@
+.rating {
+  --star-size: 24px;
+  --star-color: var(--yellow);
+  --star-background: #ddd;
+  display: inline-block;
+  font-size: var(--star-size);
+  position: relative;
+}
+
+.rating-link {
+  line-height: 1.3;
+  text-align: right;
+}
+
+.rating-stars {
+  display: flex;
+  color: #ddd; /* Цвет незаполненных звезд */
+}
+
+.raiting-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.rating-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--yellow);
+  background: linear-gradient(
+    to right,
+    var(--star-color) 0%,
+    var(--star-color) var(--percent),
+    var(--star-background) var(--percent)
+  );
+  background-clip: text;
+}
+
+.star {
+  padding: 2px;
+}
+
+.rating-value {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #5c6065;
+}

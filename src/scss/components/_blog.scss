@@ -1,0 +1,26 @@
+.blog {
+  margin-bottom: 48px;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  &__content {
+    grid-column: 8 span;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__right {
+    grid-column: 4 span;
+  }
+}

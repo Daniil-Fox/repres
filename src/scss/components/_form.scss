@@ -1,11 +1,60 @@
-.float-field {
+.form-field {
   position: relative;
   margin-bottom: 20px;
   display: flex;
   gap: 5px;
 }
 
-.float-field__input {
+.form-agree {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  &__checkbox {
+    width: 26px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    border: 1px solid var(--violet-1);
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("./../img/check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+    }
+  }
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--vilet-dark);
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  input:checked ~ .form-agree__checkbox {
+    background-color: var(--violet-1);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.form-field__input {
   width: 100%;
   height: 60px;
   padding: 20px 16px 10px 16px;
@@ -17,31 +66,31 @@
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
-.float-field__input[type="tel"] {
+.form-field__input[type="tel"] {
   padding-left: 60px;
 
-  & ~ .float-field__label {
+  & ~ .form-field__label {
     padding-left: 40px;
   }
 }
-.float-field--focused {
-  .float-field__prefix {
+.form-field--focused {
+  .form-field__prefix {
     transform: translateY(80%);
     // bottom: 20px;
   }
-  .float-field__separator {
+  .form-field__separator {
     transform: translateY(80%);
   }
-  .float-field__input[type="tel"] ~ .float-field__label {
+  .form-field__input[type="tel"] ~ .form-field__label {
     padding-left: 0;
   }
 }
-.float-field__input:focus {
+.form-field__input:focus {
   border-color: #7b61ff;
   background-color: #fff;
   outline: none;
 }
-.float-field__prefix {
+.form-field__prefix {
   position: absolute;
   left: 16px;
   bottom: 50%;
@@ -55,7 +104,7 @@
   transition: var(--transition-ui-time) var(--transition-ui-ease);
 }
 
-.float-field__label {
+.form-field__label {
   position: absolute;
   left: 16px;
   top: 50%;
@@ -68,8 +117,8 @@
   transition: all 0.2s ease;
 }
 
-.float-field__input:focus ~ .float-field__label,
-.float-field__input:not(:placeholder-shown) ~ .float-field__label {
+.form-field__input:focus ~ .form-field__label,
+.form-field__input:not(:placeholder-shown) ~ .form-field__label {
   top: 8px;
   transform: translateY(0);
   left: 16px;
@@ -80,19 +129,19 @@
   }
 }
 
-.float-field__input::placeholder {
+.form-field__input::placeholder {
   color: transparent;
 }
 
-.float-field--default .float-field__input {
+.form-field--default .form-field__input {
   color: #a0a0a0;
 }
 
-.float-field--focused .float-field__input {
+.form-field--focused .form-field__input {
   background-color: #fff;
 }
 
-.float-field--focused .float-field__label {
+.form-field--focused .form-field__label {
   top: 8px;
   font-size: 11px;
   span {
@@ -100,6 +149,6 @@
   }
 }
 
-.float-field--es .float-field__label {
+.form-field--es .form-field__label {
   font-size: 11px;
 }

@@ -1,0 +1,37 @@
+.get-credit {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    counter-reset: counter;
+  }
+}
+
+.get-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  counter-increment: counter;
+  padding: 24px;
+  border-radius: 14px;
+  background-color: var(--bg-grey);
+
+  &::before {
+    content: counter(counter);
+    background-image: url("./../img/shield.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9.5px;
+    color: var(--white);
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__text {
+    letter-spacing: -0.02em;
+  }
+}

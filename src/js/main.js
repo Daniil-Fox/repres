@@ -37,13 +37,22 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
     };
-    const destroyMask = () => {
-      if (mask) {
-        mask.destroy();
-        mask = null;
-      }
-    };
     phoneInput.forEach((input) => {
+      initMask(input);
+    });
+  }
+
+  const dateInput = document.querySelectorAll("input[data-type=date]");
+  if (dateInput.length > 0) {
+    const initMask = (inp) => {
+      const mask = IMask(inp, {
+        mask: Date,
+        min: new Date(1990, 0, 1),
+        max: new Date(2025, 0, 1),
+        lazy: true,
+      });
+    };
+    dateInput.forEach((input) => {
       initMask(input);
     });
   }
@@ -66,8 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
               content.textContent = truncatedText;
               content.dataset.fullText = fullText;
               card.classList.remove("expanded");
-              readMoreBtn.innerHTML =
-                'Leer más <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
             } else {
               card.classList.add("short");
             }
@@ -81,8 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
               content.textContent = content.dataset.fullText;
               card.classList.add("expanded");
-              readMoreBtn.innerHTML =
-                'Leer menos <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
             }
           });
         }

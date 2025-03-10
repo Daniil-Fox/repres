@@ -2,6 +2,7 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "./components/spacing";
 
 @import "./components/header";
 @import "./components/footer";
@@ -13,3 +14,24 @@
 @import "./components/pagination";
 @import "./components/phone-input";
 @import "./components/testi-item";
+@import "./components/hero";
+@import "./components/get-credit";
+@import "./components/benefits";
+@import "./components/raiting";
+@import "./components/google-review";
+@import "./components/testi-sec";
+@import "./components/control";
+@import "./components/banner";
+@import "./components/req";
+@import "./components/sign-up";
+@import "./components/showcase-item";
+@import "./components/showcase-hero";
+@import "./components/cta";
+@import "./components/offer-hero";
+@import "./components/testi-add";
+@import "./components/testi-hero";
+@import "./components/brand-item";
+@import "./components/blog";
+@import "./components/blog-item";
+@import "./components/single";
+@import "./components/page-404";

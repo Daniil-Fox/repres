@@ -1,0 +1,17 @@
+.showcase-hero {
+  padding: 48px 0;
+  background: linear-gradient(185deg, #e8e8ff 0%, #abacff 100%);
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      grid-column: 2 span;
+    }
+  }
+}

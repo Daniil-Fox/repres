@@ -3,13 +3,24 @@
   border: 1px solid var(--text-light-grey);
   border-radius: 16px;
   background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     display: flex;
     gap: 14px;
     margin-bottom: 18px;
   }
-
+  &__date {
+    display: block;
+    margin-top: auto;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 130%;
+    color: var(--text-gray-1);
+  }
   &__img {
     display: block;
     width: 48px;
@@ -29,7 +40,22 @@
     line-height: 130%;
     color: var(--text-black);
   }
+  &__answer {
+    padding: 16px;
+    border-radius: 14px;
+    background-color: var(--bg-grey);
 
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--text-gray-1);
+    }
+  }
   &__rating {
     display: flex;
     gap: 6px;
@@ -61,6 +87,16 @@
       flex-shrink: 0;
       stroke: currentColor;
       transition: transform var(--transition-ui-time) var(--transition-ui-ease);
+    }
+  }
+
+  &__body {
+    p {
+      margin: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 

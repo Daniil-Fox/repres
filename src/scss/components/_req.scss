@@ -1,0 +1,42 @@
+.req {
+  &__container {
+    background-color: var(--bg-grey);
+    padding: 36px 97px;
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__left {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 460px;
+  }
+  &__btn {
+    width: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.req-item {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: var(--white);
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}

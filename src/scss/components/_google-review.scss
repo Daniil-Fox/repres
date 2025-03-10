@@ -1,0 +1,25 @@
+.google-review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 14px 16px;
+  border: 1px solid var(--text-light-grey);
+  border-radius: 12px;
+
+  &__img {
+    height: 24px;
+    width: auto;
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__rate {
+    text-align: right;
+  }
+}

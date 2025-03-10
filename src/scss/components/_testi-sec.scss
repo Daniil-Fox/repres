@@ -1,0 +1,12 @@
+.testi-sec {
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__slide {
+    height: auto;
+  }
+}
