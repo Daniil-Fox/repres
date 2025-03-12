@@ -4,14 +4,32 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+    @include small-tablet {
+      display: block;
+    }
   }
 
   &__left {
     grid-column: 8 span;
   }
-
+  &__taxes {
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
   &__right {
     grid-column: 4 span;
+    @include small-tablet {
+      position: fixed;
+      z-index: 10;
+      bottom: var(--container-offset);
+      left: var(--container-offset);
+      right: var(--container-offset);
+
+      .offer-card {
+        position: static;
+      }
+    }
   }
 
   &__meta {
@@ -22,6 +40,9 @@
     color: var(--text-gray-1);
     &:not(:last-child) {
       margin-bottom: 40px;
+      @include tablet {
+        margin-bottom: 24px;
+      }
     }
   }
   &__btn {
@@ -38,9 +59,23 @@
       height: 426px;
       width: 100%;
       border-radius: 20px;
-
+      @include tablet {
+        height: 350px;
+      }
+      @include small-tablet {
+        height: 280px;
+      }
+      @include mobile {
+        height: 204px;
+      }
       &:not(:last-child) {
         margin-bottom: 40px;
+        @include tablet {
+          margin-bottom: 30px;
+        }
+        @include small-tablet {
+          margin-bottom: 24px;
+        }
       }
     }
 
@@ -50,7 +85,12 @@
       font-size: 18px;
       line-height: 140%;
       color: var(--text-black);
-
+      @include tablet {
+        font-size: 16px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
       &:not(:last-child) {
         margin-bottom: 16px;
       }
@@ -62,7 +102,12 @@
       font-size: 24px;
       line-height: 120%;
       color: var(--text-black);
-
+      @include tablet {
+        font-size: 20px;
+      }
+      @include small-tablet {
+        font-size: 18px;
+      }
       &:not(:last-child) {
         margin-bottom: 16px;
       }
@@ -74,7 +119,9 @@
       font-size: 18px;
       line-height: 120%;
       color: var(--text-black);
-
+      @include small-tablet {
+        font-size: 16px;
+      }
       &:not(:last-child) {
         margin-bottom: 8px;
       }

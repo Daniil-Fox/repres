@@ -14937,6 +14937,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import "./components/pagination.js";
 
 /***/ }),
 
@@ -15038,9 +15039,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 __webpack_require__.r(__webpack_exports__);
 const tabletMedia = window.matchMedia("(max-width: 800px)");
+const stickyBlock = document.querySelector(".mob-sticky");
+const footer = document.querySelector("footer");
+let globalObserver = null;
 tabletMedia.addEventListener("change", e => {
-  const stickyBlock = document.querySelector(".mob-sticky");
-  const footer = document.querySelector("footer");
+  if (globalObserver) globalObserver.disconnect();
   if (stickyBlock) {
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -15067,6 +15070,24 @@ tabletMedia.addEventListener("change", e => {
     }
   }
 });
+if (stickyBlock) {
+  globalObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        stickyBlock.style.transform = "translateY(100%)";
+        stickyBlock.style.opacity = "0";
+        stickyBlock.style.pointerEvents = "none";
+      } else {
+        stickyBlock.style.transform = "translateY(0)";
+        stickyBlock.style.opacity = "1";
+        stickyBlock.style.pointerEvents = "auto";
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  globalObserver.observe(footer);
+}
 
 /***/ }),
 

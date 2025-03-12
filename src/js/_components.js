@@ -4,3 +4,4 @@ import "./components/raiting.js";
 import "./components/sliders.js";
 import "./components/mob-sticky.js";
 import "./components/testi-cards.js";
+// import "./components/pagination.js";

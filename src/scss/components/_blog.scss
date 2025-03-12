@@ -29,5 +29,17 @@
 
   &__right {
     grid-column: 4 span;
+
+    @include small-tablet {
+      position: fixed;
+      z-index: 10;
+      bottom: var(--container-offset);
+      left: var(--container-offset);
+      right: var(--container-offset);
+
+      .offer-card {
+        position: static;
+      }
+    }
   }
 }

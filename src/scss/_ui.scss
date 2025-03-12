@@ -471,6 +471,9 @@ h6,
 
 .breadcrumbs {
   padding: 24px 0;
+  @include mobile {
+    padding: 16px 0;
+  }
   span {
     display: flex;
     flex-wrap: wrap;
