@@ -4,11 +4,23 @@
   background-color: var(--white);
   border-radius: 14px;
   padding: 32px;
-
+  @include tablet {
+    max-width: 50%;
+  }
+  @include small-tablet {
+    max-width: 100%;
+    padding: 24px;
+  }
   &__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
   }
 }
 
@@ -23,6 +35,9 @@
   line-height: 1.2;
   text-align: right;
   color: var(--orange-1);
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .loan__slider-container {

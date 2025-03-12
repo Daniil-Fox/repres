@@ -2,16 +2,26 @@
   padding: 24px;
   border: 1px solid var(--text-light-grey);
   border-radius: 16px;
+  @include small-tablet {
+    padding: 16px;
+  }
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include small-tablet {
+      gap: 20px;
+    }
   }
 
   &__btn {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
+    @include small-tablet {
+      width: 24px;
+      height: 24px;
+    }
     svg {
       display: block;
       width: 100%;
@@ -30,6 +40,10 @@
       }
     }
   }
+  &__title {
+    font-weight: 700;
+    line-height: 1.3;
+  }
 
   &__body {
     box-sizing: content-box;
@@ -40,6 +54,9 @@
     p {
       &:first-child {
         padding-top: 16px;
+        @include small-tablet {
+          padding-top: 12px;
+        }
       }
       margin: 0;
     }

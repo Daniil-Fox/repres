@@ -1,5 +1,8 @@
 .sign-up {
   padding-top: 48px;
+  @include tablet {
+    padding-top: 32px;
+  }
   &__container {
     max-width: calc(560px + var(--container-offset));
     padding: 0 var(--container-offset);

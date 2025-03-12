@@ -6,12 +6,12 @@
     <div class="site-container">
       @include('partials/header-sec.html')
       <main class="main">
-        <section class="sign-up mb160">
+        <section class="sign-up mb160 mob-mb64">
           <div class="sign-up__container">
-            <h2 class="sign-up__title headline-2 mb16 centered">
+            <h2 class="sign-up__title headline-2 mb16 centered mob-mb8">
               Создать аккаунт
             </h2>
-            <p class="sign-up__desc subtitle-1 mb48 centered">
+            <p class="sign-up__desc subtitle-1 mb48 mob-mb32 centered">
               Вы получите свои деньги в <span>17:40</span>
             </p>
             <form action="#" class="form">
@@ -81,7 +81,7 @@
                 >
               </div>
 
-              <label class="form-agree">
+              <label class="form-agree mb24">
                 <input
                   type="checkbox"
                   name="agreement"
@@ -96,6 +96,9 @@
                   </a>
                 </div>
               </label>
+              <button class="btn btn--medium btn--primary form-btn">
+                Продолжить
+              </button>
             </form>
           </div>
         </section>

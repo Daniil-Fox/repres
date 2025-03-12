@@ -78,9 +78,11 @@ class LoanSlider {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const loanSlider = new LoanSlider();
+  if (document.querySelector(".loan")) {
+    const loanSlider = new LoanSlider();
 
-  document.addEventListener("loan:request", (event) => {
-    console.log("Loan requested:", event.detail);
-  });
+    document.addEventListener("loan:request", (event) => {
+      console.log("Loan requested:", event.detail);
+    });
+  }
 });

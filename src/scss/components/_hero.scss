@@ -7,5 +7,26 @@
     background-size: contain, cover;
     background-repeat: no-repeat;
     background-position: calc(100% - 30px) 100%, center;
+
+    @include tablet {
+      background-position: 110% 100%, center;
+    }
+    @include small-tablet {
+      padding: var(--container-offset);
+      padding-top: 300px;
+      background-size: 60% auto, cover;
+      background-position: top;
+      margin: 0 calc(-1 * var(--container-offset));
+    }
+    @include mobile {
+      padding-top: 60%;
+      background-size: 100% auto, cover;
+      background-position: 0% -30px, center;
+    }
+    // @include tablet {
+    //   padding-top: 200px;
+    //   background-size: 100% auto, cover;
+    //   background-position: top, center;
+    // }
   }
 }

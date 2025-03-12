@@ -6,7 +6,7 @@
   --font4: "Arial", sans-serif;
   --font5: "MuseoModerno", sans-serif;
   --content-width: 1140px;
-  --container-offset: 15px;
+  --container-offset: 12px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   --white: #fff;
@@ -53,6 +53,10 @@ h2,
   &--white {
     color: var(--white);
   }
+
+  @include tablet {
+    font-size: 24px;
+  }
 }
 
 h3,
@@ -89,6 +93,12 @@ h5,
   &--white {
     color: var(--white);
   }
+  @include small-tablet {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
 }
 
 h6,
@@ -111,6 +121,9 @@ h6,
   color: var(--text-black);
   &--white {
     color: var(--white);
+  }
+  @include mobile {
+    font-size: 14px;
   }
 }
 
@@ -175,6 +188,9 @@ h6,
   &--white {
     color: var(--white);
   }
+  @include mobile {
+    font-size: 16px;
+  }
 }
 .text-1 {
   margin: 0;
@@ -184,6 +200,9 @@ h6,
   color: var(--text-black);
   &--white {
     color: var(--white);
+  }
+  @include mobile {
+    font-size: 14px;
   }
 }
 
@@ -387,7 +406,11 @@ h6,
   font-size: 16px;
   line-height: 125%;
   color: var(--white);
-
+  @include mobile {
+    width: 85px;
+    padding: 8px;
+    border-radius: 62px;
+  }
   svg {
     width: 20px;
     height: 20px;
@@ -476,5 +499,47 @@ h6,
         }
       }
     }
+  }
+}
+
+.tablet-disable {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+
+.tablet-enable {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.small-tablet-disable {
+  display: block;
+  @include small-tablet {
+    display: none;
+  }
+}
+
+.small-tablet-enable {
+  display: none;
+  @include small-tablet {
+    display: block;
+  }
+}
+
+.mob-disable {
+  display: block;
+  @include mobile {
+    display: none;
+  }
+}
+
+.mob-enable {
+  display: none;
+  @include mobile {
+    display: block;
   }
 }

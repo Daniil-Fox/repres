@@ -3,6 +3,14 @@
   margin-bottom: 20px;
   display: flex;
   gap: 5px;
+  @include tablet {
+    margin-bottom: 16px;
+  }
+}
+.form-btn {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .form-agree {

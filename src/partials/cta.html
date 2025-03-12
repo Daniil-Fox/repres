@@ -7,7 +7,7 @@
           <p class="button-18">Наш менеджер вам поможет, напишите в чате</p>
         </div>
         <div class="cta__row">
-          <a href="#" class="link-soc link-soc--tg link-soc--full">
+          <a href="#" class="link-soc link-soc--tg link-soc--full cta__link">
             <svg
               width="25"
               height="24"
@@ -24,7 +24,10 @@
           </a>
         </div>
         <div class="cta__row">
-          <a href="#" class="link-soc link-soc--whatsapp link-soc--full">
+          <a
+            href="#"
+            class="link-soc link-soc--whatsapp link-soc--full cta__link"
+          >
             <svg
               width="25"
               height="24"
@@ -43,7 +46,15 @@
       </div>
       <div class="cta__right">
         <div class="cta__img">
-          <img src="./img/cta.webp" alt="" />
+          <picture>
+            <source
+              srcset="./img/man.webp"
+              type="image/webp"
+              media="(max-width: 800px)"
+            />
+            <source srcset="./img/cta.webp" type="image/webp" />
+            <img src="./img/cta.webp" alt="" />
+          </picture>
         </div>
       </div>
     </div>

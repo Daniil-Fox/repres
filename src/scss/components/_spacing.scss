@@ -4,6 +4,9 @@
 .mb8 {
   margin-bottom: 8px;
 }
+.mb12 {
+  margin-bottom: 12px;
+}
 .mb16 {
   margin-bottom: 16px;
 }
@@ -42,12 +45,15 @@
 .mb160 {
   margin-bottom: 160px;
 }
-@include mobile {
+@include small-tablet {
   .mob-mb4 {
     margin-bottom: 4px;
   }
   .mob-mb8 {
     margin-bottom: 8px;
+  }
+  .mob-mb12 {
+    margin-bottom: 12px;
   }
   .mob-mb16 {
     margin-bottom: 16px;

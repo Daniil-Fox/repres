@@ -4,6 +4,10 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__content {
@@ -14,7 +18,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
     &:not(:last-child) {
       margin-bottom: 48px;
     }

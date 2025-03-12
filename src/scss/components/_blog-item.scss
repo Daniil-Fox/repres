@@ -50,6 +50,10 @@
     line-height: 120%;
     font-weight: 700;
     transition: 0.2s ease-in;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
     a {
       color: inherit;
       &::after {

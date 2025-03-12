@@ -1,6 +1,11 @@
 .showcase-hero {
   padding: 48px 0;
   background: linear-gradient(185deg, #e8e8ff 0%, #abacff 100%);
+  border-radius: 0 0 24px 24px;
+  @include tablet {
+    padding: 24px 0;
+    padding-bottom: 72px;
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -8,10 +13,16 @@
   }
 
   &__item {
+    @include small-tablet {
+      grid-column: 3 span;
+    }
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
       grid-column: 2 span;
+      @include small-tablet {
+        grid-column: 6 span;
+      }
     }
   }
 }
