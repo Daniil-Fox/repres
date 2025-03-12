@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+    @include tablet {
+      display: block;
+    }
   }
   &__content {
     grid-column: 8 span;
@@ -10,6 +13,9 @@
 
   &__right {
     grid-column: 4 span;
+    @include tablet {
+      display: none;
+    }
   }
   &__items {
     &:not(:last-child) {

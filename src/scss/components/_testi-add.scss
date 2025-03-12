@@ -7,9 +7,14 @@
   padding: 24px;
   border-radius: 24px;
   background: var(--bg-grey);
-
+  @include mobile {
+    flex-wrap: wrap;
+  }
   &__title {
     margin-bottom: 12px;
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   .rating-container {
@@ -30,5 +35,13 @@
 
   &__btn {
     padding: 15px 70px;
+
+    @include tablet {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+    @include mobile {
+      width: 100%;
+    }
   }
 }
